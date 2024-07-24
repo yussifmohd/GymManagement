@@ -1,0 +1,11 @@
+.vs/
+/GymManagment.Api/bin/Debug/net8.0/
+/GymManagment.Api/obj/
+/GymManagment.Application/bin/Debug/net8.0/
+/GymManagment.Application/obj/
+/GymManagment.Domain/bin/Debug/net8.0/
+/GymManagment.Domain/obj/
+/GymManagment.Contracts/bin/Debug/net8.0/
+/GymManagment.Contracts/obj/
+/GymManagment.Infrastructure/bin/Debug/net8.0/
+/GymManagment.Infrastructure/obj/
