@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymManagment.Domain.Subscription;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,11 @@ namespace GymManagment.Domain.Admins
 
         private Admin() { }
 
+        public void SetSubscription(Subscription.Subscription subscription)
+        {
+            SubscriptionId.HasValue.Throw().IfTrue();
+            SubscriptionId = subscription.Id;
+        }
 
         public void DeleteSubscription(Guid subscriptionId)
         {
@@ -29,6 +35,5 @@ namespace GymManagment.Domain.Admins
 
             SubscriptionId = null;
         }
-
     }
 }

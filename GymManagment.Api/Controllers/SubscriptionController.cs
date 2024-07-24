@@ -1,4 +1,5 @@
 ﻿using GymManagment.Application.Subscriptions.Command.CreateSubcription;
+using GymManagment.Application.Subscriptions.Command.DeleteSubscription;
 using GymManagment.Application.Subscriptions.Queries.GetSubscription;
 using GymManagment.Contracts.Subscriptions;
 using MediatR;
@@ -11,7 +12,7 @@ namespace GymManagment.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubscriptionController : ControllerBase
+    public class SubscriptionController : ApiController
     {
         //private readonly IMediator _mediator;
         private readonly ISender _mediator; //We Use The Smaller Intefrace ISender Since this the one we use (Interface Segregation)
@@ -31,9 +32,14 @@ namespace GymManagment.Api.Controllers
             var command = new CreateSubscriptionCommand(subsriptionType, request.AdminId);
             var CreateSubscription = await _mediator.Send(command);
 
-            return CreateSubscription.MatchFirst(
-                subscription => Ok(new SubscriptionResponse(subscription.Id, request.SubscriptionType)),
-                error => Problem()
+            return CreateSubscription.Match(
+                    subscription => CreatedAtAction(
+                        nameof(GetSubscription),
+                        new { subscriptionId = subscription.Id },
+                        new SubscriptionResponse(
+                            subscription.Id,
+                            ToDto(subscription.SubscriptionType))),
+                    Problem
                 );
         }
 
@@ -43,14 +49,34 @@ namespace GymManagment.Api.Controllers
             var query = new GetSubscriptionQuery(subscriptionId);
             var GetSubscriptionResult = await _mediator.Send(query);
 
-            return GetSubscriptionResult.MatchFirst(
+            return GetSubscriptionResult.Match(
                 subscription => Ok(new SubscriptionResponse(
                     subscription.Id,
-                    Enum.Parse<SubscriptionType>(subscription.SubscriptionType.Name)
-                    )),
-                error => Problem()
-                );
+                    ToDto(subscription.SubscriptionType))),
+                 Problem);
         }
 
+        [HttpDelete("{subscriptionId:guid}")]
+        public async Task<IActionResult> DeleteSubscription(Guid subscriptionId)
+        {
+            var command = new DeleteSubscriptionCommand(subscriptionId);
+
+            var createdSubscriptionResult = await _mediator.Send(command);
+
+            return createdSubscriptionResult.Match(
+                _ => NoContent(),
+                Problem);
+        }
+
+        private static SubscriptionType ToDto(DomainSubscriptionType subscriptionType)
+        {
+            return subscriptionType.Name switch
+            {
+                nameof(DomainSubscriptionType.Free) => SubscriptionType.Free,
+                nameof(DomainSubscriptionType.Starter) => SubscriptionType.Starter,
+                nameof(DomainSubscriptionType.Pro) => SubscriptionType.Pro,
+                _ => throw new InvalidOperationException(),
+            };
+        }
     }
 }
