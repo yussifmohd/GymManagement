@@ -13,9 +13,9 @@ namespace GymManagment.Infrastructure.Subscriptions.Persistence
 {
     public class SubscriptionRepository : ISubscriptionRepository
     {
-        private readonly GymManagmentDbContext _dbContext;
+        private readonly GymManagementDbContext _dbContext;
 
-        public SubscriptionRepository(GymManagmentDbContext dbContext)
+        public SubscriptionRepository(GymManagementDbContext dbContext)
         {
             _dbContext = dbContext;
         }

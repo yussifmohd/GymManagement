@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GymManagment.Infrastructure.Migrations
 {
-    [DbContext(typeof(GymManagmentDbContext))]
+    [DbContext(typeof(GymManagementDbContext))]
     [Migration("20240722065632_UpdateSubscriptionTable")]
     partial class UpdateSubscriptionTable
     {
