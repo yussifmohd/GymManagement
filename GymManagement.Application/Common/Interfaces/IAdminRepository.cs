@@ -9,7 +9,7 @@ namespace GymManagment.Application.Common.Interfaces
 {
     public interface IAdminRepository
     {
-        Task<Admin> GetByIdAsync(Guid adminId);
+        Task<Admin?> GetByIdAsync(Guid adminId);
         Task UpdateAsync (Admin admin);
     }
 }
