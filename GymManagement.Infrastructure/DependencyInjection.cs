@@ -1,4 +1,5 @@
 ﻿using GymManagement.Infrastructure.Admins.Persistence;
+using GymManagement.Infrastructure.Gyms.Presistance;
 using GymManagment.Application.Common.Interfaces;
 using GymManagment.Infrastructure.Common.Presistence;
 using GymManagment.Infrastructure.Subscriptions.Persistence;
@@ -16,10 +17,11 @@ namespace GymManagment.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddDbContext<GymManagmentDbContext>(options => options.UseSqlite("Data Source = GymManagement.db"));
+            services.AddDbContext<GymManagementDbContext>(options => options.UseSqlite("Data Source = GymManagement.db"));
 
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
-            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IAdminRepository, AdminsRepository>();
+            services.AddScoped<IGymRepository, GymRepository>();
 
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<GymManagementDbContext>());
 
