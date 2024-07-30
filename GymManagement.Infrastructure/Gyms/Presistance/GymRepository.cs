@@ -29,7 +29,7 @@ namespace GymManagement.Infrastructure.Gyms.Presistance
             return await _dbContext.Gyms.AsNoTracking().AnyAsync(gym => gym.Id == id);
         }
 
-        public async Task<Gym?> GetGymById(Guid id)
+        public async Task<Gym?> GetGymByIdAsync(Guid id)
         {
             return await _dbContext.Gyms.FirstOrDefaultAsync(gym => gym.Id == id);
         }

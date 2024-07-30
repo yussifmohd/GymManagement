@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ErrorOr;
+using GymManagment.Domain.Gyms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Throw;
 
 namespace GymManagment.Domain.Subscription
 {
@@ -23,6 +26,20 @@ namespace GymManagment.Domain.Subscription
             Id = id ?? Guid.NewGuid();
 
             _maxGyms = GetMaxGyms();
+        }
+
+        public ErrorOr<Success> AddGym(Gym gym)
+        {
+            _gymIds.Throw().IfContains(gym.Id);
+
+            if (_gymIds.Count >= _maxGyms)
+            {
+                return SubscriptionErrors.CannotHaveMoreGymsThanTheSubscriptionAllows;
+            }
+
+            _gymIds.Add(gym.Id);
+
+            return Result.Success;
         }
 
         public int GetMaxGyms() => SubscriptionType.Name switch
@@ -48,6 +65,18 @@ namespace GymManagment.Domain.Subscription
             nameof(SubscriptionType.Pro) => int.MaxValue,
             _ => throw new InvalidOperationException()
         };
+
+        public bool HasGym(Guid gymId)
+        {
+            return _gymIds.Contains(gymId);
+        }
+
+        public void RemoveGym(Guid gymId)
+        {
+            _gymIds.Throw().IfNotContains(gymId);
+
+            _gymIds.Remove(gymId);
+        }
 
         private Subscription()
         {
