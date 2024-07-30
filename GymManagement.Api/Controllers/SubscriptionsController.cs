@@ -12,12 +12,12 @@ namespace GymManagment.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubscriptionController : ApiController
+    public class SubscriptionsController : ApiController
     {
         //private readonly IMediator _mediator;
         private readonly ISender _mediator; //We Use The Smaller Intefrace ISender Since this the one we use (Interface Segregation)
 
-        public SubscriptionController(ISender mediator)
+        public SubscriptionsController(ISender mediator)
         {
             _mediator = mediator;
         }

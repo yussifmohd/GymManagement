@@ -17,7 +17,7 @@ namespace GymManagment.Api.Controllers
 
             if(errors.All(error => error.Type == ErrorType.Validation)) //if all are validarion erros
             {
-                return ValidationProblem();
+                return ValidationProblem(errors);
             }
 
             return Problem(errors[0]);
