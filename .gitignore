@@ -9,7 +9,6 @@
 /GymManagement.Contracts/obj/
 /GymManagement.Infrastructure/bin/Debug/net8.0/
 /GymManagement.Infrastructure/obj/
-/GymManagement.Api/obj/GymManagement.db
 /GymManagement.Api/GymManagement.db
 /GymManagement.Api/GymManagement.db-shm
 /GymManagement.Api/GymManagement.db-wal

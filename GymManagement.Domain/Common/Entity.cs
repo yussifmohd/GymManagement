@@ -12,6 +12,15 @@ namespace GymManagement.Domain.Common
 
         protected List<IDomainEvent> _domainEvents { get; set; } = [];
 
+        public List<IDomainEvent> PopDomainEvents()
+        {
+            var copy = _domainEvents.ToList();
+
+            _domainEvents.Clear();
+
+            return copy;
+        }
+
         protected Entity(Guid id) => Id = id;
 
         protected Entity() { } //for reflection

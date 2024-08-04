@@ -1,3 +1,4 @@
+using GymManagement.Infrastructure;
 using GymManagment.Application;
 using GymManagment.Infrastructure;
 
@@ -12,9 +13,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
+app.AddInfrastructureMiddleware();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
