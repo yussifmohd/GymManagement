@@ -42,12 +42,11 @@ namespace GymManagment.Application.Subscriptions.Command.DeleteSubscription
 
             admin.DeleteSubscription(request.SubscriptionId);
 
-            var gymsToDelete = await _gymRepository.ListBySubscriptionIdAsync(request.SubscriptionId);
+            //var gymsToDelete = await _gymRepository.ListBySubscriptionIdAsync(request.SubscriptionId);
 
             await _adminRepository.UpdateAsync(admin);
-            await _gymRepository.RemoveRangeAsync(gymsToDelete);
-            await _subscriptionRepository.RemoveSubscriptionAsync(subscription);
-
+            //await _gymRepository.RemoveRangeAsync(gymsToDelete);
+            //await _subscriptionRepository.RemoveSubscriptionAsync(subscription);
             await _unitOfWork.CommitChangesAsync();
 
             return Result.Deleted;
