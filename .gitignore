@@ -1,14 +1,6 @@
 .vs/
-/GymManagement.Api/bin/Debug/net8.0/
-/GymManagement.Api/obj/
-/GymManagement.Application/bin/Debug/net8.0/
-/GymManagement.Application/obj/
-/GymManagement.Domain/bin/Debug/net8.0/
-/GymManagement.Domain/obj/
-/GymManagement.Contracts/bin/Debug/net8.0/
-/GymManagement.Contracts/obj/
-/GymManagement.Infrastructure/bin/Debug/net8.0/
-/GymManagement.Infrastructure/obj/
+*/bin/Debug/net8.0/
+*/obj/
 /GymManagement.Api/GymManagement.db
 /GymManagement.Api/GymManagement.db-shm
 /GymManagement.Api/GymManagement.db-wal
