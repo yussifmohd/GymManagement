@@ -13,19 +13,19 @@ namespace GymManagment.Application.Subscriptions.Command.CreateSubcription
     public class CreatSubscriptionCommandHandler : IRequestHandler<CreateSubscriptionCommand, ErrorOr<Subscription>>
     {
         private readonly ISubscriptionRepository _subscriptionRepository;
-        private readonly IAdminRepository _adminepository;
+        private readonly IAdminRepository _adminRepository;
         private readonly IUnitOfWork _unitOfWork;
 
         public CreatSubscriptionCommandHandler(ISubscriptionRepository subscriptionRepository, IUnitOfWork unitOfWork, IAdminRepository adminepository)
         {
             _subscriptionRepository = subscriptionRepository;
-            _adminepository = adminepository;
+            _adminRepository = adminepository;
             _unitOfWork = unitOfWork;
         }
 
         public async Task<ErrorOr<Subscription>> Handle(CreateSubscriptionCommand request, CancellationToken cancellationToken)
         {
-            var admin = await _adminepository.GetByIdAsync(request.AdminId);
+            var admin = await _adminRepository.GetByIdAsync(request.AdminId);
 
             if(admin is null)
             {
@@ -46,7 +46,7 @@ namespace GymManagment.Application.Subscriptions.Command.CreateSubcription
 
             //Add In The DB
             await _subscriptionRepository.AddSubscriptionAsync(subscription);
-            await _adminepository.UpdateAsync(admin);
+            await _adminRepository.UpdateAsync(admin);
             await _unitOfWork.CommitChangesAsync();
 
             return subscription;

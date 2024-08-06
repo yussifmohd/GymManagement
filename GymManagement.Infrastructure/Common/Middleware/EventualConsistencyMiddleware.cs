@@ -22,16 +22,16 @@ namespace GymManagement.Infrastructure.Common.Middleware
             {
                 try
                 {
+                    await transaction.CommitAsync();
+
                     if (context.Items.TryGetValue("DomainEventsQueue", out var value) &&
                         value is Queue<IDomainEvent> domainEventsQueue)
                     {
                         while (domainEventsQueue!.TryDequeue(out var domainEvent))
                         {
-                            await publisher.Publish(domainEventsQueue);
+                            await publisher.Publish(domainEvent);
                         }
                     }
-
-                    await transaction.CommitAsync();
                 }
                 catch (Exception)
                 {

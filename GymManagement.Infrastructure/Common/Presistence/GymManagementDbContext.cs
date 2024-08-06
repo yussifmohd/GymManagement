@@ -43,7 +43,7 @@ namespace GymManagment.Infrastructure.Common.Presistence
                 await PublishDomainEvents(_publisher, domainEvents);
             }
 
-            await base.SaveChangesAsync();
+            await SaveChangesAsync();
         }
 
         private async Task PublishDomainEvents(IPublisher publisher, List<IDomainEvent> domainEvents)
@@ -66,7 +66,7 @@ namespace GymManagment.Infrastructure.Common.Presistence
             domainEvents.ForEach(domainEventsQueue.Enqueue);
 
             // store the queue in the http context
-            _httpContextAccessor.HttpContext.Items["DomainEventsQueu"] = domainEventsQueue;
+            _httpContextAccessor.HttpContext.Items["DomainEventsQueue"] = domainEventsQueue;
         }
 
         private bool IsUserWaitingOnline() => _httpContextAccessor.HttpContext is not null;
