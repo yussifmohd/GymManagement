@@ -10,7 +10,7 @@ namespace TestsCommon.TestConstants
     {
         public static class Admin
         {
-            public static Guid Id = new("2150E333-8FDC-42A3-9474-1A3956D46DE8");
+            public static Guid Id = new("90691915-8ca1-4843-aca4-072586abf309");
         }
     }
 }

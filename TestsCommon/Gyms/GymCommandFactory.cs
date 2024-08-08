@@ -12,7 +12,7 @@ namespace TestsCommon.Gyms
     {
         public static CreateGymCommand CreateCreateGymCommand(string name = Constants.Gym.Name, Guid? subscriptionId = null)
         {
-            return new CreateGymCommand(name , SubscriptionId: subscriptionId ?? Constants.Subscriptions.Id);
+            return new CreateGymCommand(name, SubscriptionId: subscriptionId ?? Constants.Subscriptions.Id);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using GymManagment.Domain.Subscription;
+﻿using GymManagement.Domain.Subscription;
 using System;
 using System.Collections.Generic;
 using System.Linq;

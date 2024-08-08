@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace GymManagment.Contracts.Subscriptions
+namespace GymManagement.Contracts.Subscriptions
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum SubscriptionType
