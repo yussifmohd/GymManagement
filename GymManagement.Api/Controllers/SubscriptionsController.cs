@@ -1,14 +1,14 @@
-﻿using GymManagment.Application.Subscriptions.Command.CreateSubcription;
-using GymManagment.Application.Subscriptions.Command.DeleteSubscription;
-using GymManagment.Application.Subscriptions.Queries.GetSubscription;
-using GymManagment.Contracts.Subscriptions;
+﻿using GymManagement.Application.Subscriptions.Command.CreateSubcription;
+using GymManagement.Application.Subscriptions.Command.DeleteSubscription;
+using GymManagement.Application.Subscriptions.Queries.GetSubscription;
+using GymManagement.Contracts.Subscriptions;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using DomainSubscriptionType = GymManagment.Domain.Subscription.SubscriptionType;
+using DomainSubscriptionType = GymManagement.Domain.Subscription.SubscriptionType;
 
-namespace GymManagment.Api.Controllers
+namespace GymManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

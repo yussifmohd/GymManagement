@@ -1,11 +1,11 @@
-﻿using GymManagment.Domain.Gyms;
+﻿using GymManagement.Domain.Gyms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Application.Common.Interfaces
+namespace GymManagement.Application.Common.Interfaces
 {
     public interface IGymRepository
     {

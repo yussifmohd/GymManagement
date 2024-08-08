@@ -4,7 +4,7 @@ using GymManagement.Application.Gyms.Command.DeleteGym;
 using GymManagement.Application.Gyms.Queries.GetGym;
 using GymManagement.Application.Gyms.Queries.ListGyms;
 using GymManagement.Contracts.Gyms;
-using GymManagment.Api.Controllers;
+using GymManagement.Api.Controllers;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

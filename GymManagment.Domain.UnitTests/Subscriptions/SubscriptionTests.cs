@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 using FluentAssertions;
-using GymManagment.Domain.Subscription;
+using GymManagement.Domain.Subscription;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using TestsCommon.Gyms;
 using TestsCommon.Subscriptions;
 
-namespace GymManagment.Domain.UnitTests.Subscriptions
+namespace GymManagement.Domain.UnitTests.Subscriptions
 {
     public class SubscriptionTests
     {
-        //Arrange
-        //Act
-        //Assert
+        //Test Function Naming Convention
+        //Arrange_Act_Assertion
+        //ActionName_CaseYouAreTesting_WhatShouldHappen
         [Fact]
         public void AddGym_WhenMoreThanSubscriptionAllows_ShouldFail()
         {

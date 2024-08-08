@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
-using GymManagment.Application.Common.Interfaces;
-using GymManagment.Domain.Gyms;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Domain.Gyms;
 using MediatR;
 using System;
 using System.Collections;

@@ -1,5 +1,5 @@
 ﻿using GymManagement.Infrastructure.Common.Presistence;
-using GymManagment.Domain.Gyms;
+using GymManagement.Domain.Gyms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

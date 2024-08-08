@@ -1,7 +1,7 @@
 ﻿using ErrorOr;
-using GymManagment.Application.Common.Interfaces;
-using GymManagment.Domain.Subscription;
-using GymManagment.Infrastructure.Common.Presistence;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Domain.Subscription;
+using GymManagement.Infrastructure.Common.Presistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Infrastructure.Subscriptions.Persistence
+namespace GymManagement.Infrastructure.Subscriptions.Persistence
 {
     public class SubscriptionRepository : ISubscriptionRepository
     {

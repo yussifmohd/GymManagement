@@ -1,8 +1,8 @@
 ﻿using GymManagement.Domain.Common;
-using GymManagment.Application.Common.Interfaces;
-using GymManagment.Domain.Admins;
-using GymManagment.Domain.Gyms;
-using GymManagment.Domain.Subscription;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Domain.Admins;
+using GymManagement.Domain.Gyms;
+using GymManagement.Domain.Subscription;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Infrastructure.Common.Presistence
+namespace GymManagement.Infrastructure.Common.Presistence
 {
     public class GymManagementDbContext(
         DbContextOptions options,
@@ -21,9 +21,9 @@ namespace GymManagment.Infrastructure.Common.Presistence
         IPublisher _publisher) : DbContext(options), IUnitOfWork
     {
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
-        public DbSet<Subscription> Subscriptions { get; set; }
-        public DbSet<Admin> Admins {  get; set; }
-        public DbSet<Gym> Gyms { get; set; }
+        public DbSet<Subscription> Subscriptions { get; set; } = null!;
+        public DbSet<Admin> Admins {  get; set; } = null!;
+        public DbSet<Gym> Gyms { get; set; } = null!;
 
         public async Task CommitChangesAsync()
         {

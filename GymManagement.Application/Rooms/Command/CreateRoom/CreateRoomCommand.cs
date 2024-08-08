@@ -1,5 +1,5 @@
 ﻿using ErrorOr;
-using GymManagment.Domain.Rooms;
+using GymManagement.Domain.Rooms;
 using MediatR;
 using System;
 using System.Collections.Generic;

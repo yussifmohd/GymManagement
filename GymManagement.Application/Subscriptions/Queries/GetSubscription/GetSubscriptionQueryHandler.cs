@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
-using GymManagment.Application.Common.Interfaces;
-using GymManagment.Domain.Subscription;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Domain.Subscription;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Application.Subscriptions.Queries.GetSubscription
+namespace GymManagement.Application.Subscriptions.Queries.GetSubscription
 {
     public class GetSubscriptionQueryHandler : IRequestHandler<GetSubscriptionQuery, ErrorOr<Subscription>>
     {

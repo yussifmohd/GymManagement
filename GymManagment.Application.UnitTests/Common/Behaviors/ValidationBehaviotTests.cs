@@ -4,12 +4,12 @@ using FluentValidation;
 using FluentValidation.Results;
 using GymManagement.Application.Common.Behavior;
 using GymManagement.Application.Gyms.Command.CreateGym;
-using GymManagment.Domain.Gyms;
+using GymManagement.Domain.Gyms;
 using MediatR;
 using NSubstitute;
 using TestsCommon.Gyms;
 
-namespace GymManagment.Application.UnitTests.Common.Behaviors
+namespace GymManagement.Application.UnitTests.Common.Behaviors
 {
     public class ValidationBehavotTests
     {

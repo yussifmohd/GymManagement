@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Domain.Subscription
+namespace GymManagement.Domain.Subscription
 {
     public class SubscriptionType : SmartEnum<SubscriptionType>
     {

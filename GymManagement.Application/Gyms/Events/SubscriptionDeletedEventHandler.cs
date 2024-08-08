@@ -1,5 +1,5 @@
 using GymManagement.Domain.Admins.Events;
-using GymManagment.Application.Common.Interfaces;
+using GymManagement.Application.Common.Interfaces;
 using MediatR;
 
 namespace GymManagement.Application.Gyms.Events;

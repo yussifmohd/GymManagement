@@ -1,5 +1,5 @@
 ﻿using ErrorOr;
-using GymManagment.Domain.Gyms;
+using GymManagement.Domain.Gyms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Throw;
 
-namespace GymManagment.Domain.Subscription
+namespace GymManagement.Domain.Subscription
 {
     public class Subscription
     {

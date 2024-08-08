@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Reflection.Metadata.Ecma335;
 
-namespace GymManagment.Api.Controllers
+namespace GymManagement.Api.Controllers
 {
     [ApiController]
     public class ApiController : ControllerBase

@@ -1,8 +1,8 @@
 ﻿using GymManagement.Infrastructure.Admins.Persistence;
 using GymManagement.Infrastructure.Gyms.Presistance;
-using GymManagment.Application.Common.Interfaces;
-using GymManagment.Infrastructure.Common.Presistence;
-using GymManagment.Infrastructure.Subscriptions.Persistence;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Infrastructure.Common.Presistence;
+using GymManagement.Infrastructure.Subscriptions.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Infrastructure
+namespace GymManagement.Infrastructure
 {
     public static class DependencyInjection
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Domain.Rooms
+namespace GymManagement.Domain.Rooms
 {
     public class Room
     {

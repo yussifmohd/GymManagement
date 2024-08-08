@@ -1,6 +1,6 @@
-﻿using GymManagment.Application.Common.Interfaces;
-using GymManagment.Domain.Gyms;
-using GymManagment.Infrastructure.Common.Presistence;
+﻿using GymManagement.Application.Common.Interfaces;
+using GymManagement.Domain.Gyms;
+using GymManagement.Infrastructure.Common.Presistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

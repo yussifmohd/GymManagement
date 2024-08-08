@@ -1,5 +1,5 @@
 ﻿using GymManagement.Domain.Common;
-using GymManagment.Infrastructure.Common.Presistence;
+using GymManagement.Infrastructure.Common.Presistence;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using System;

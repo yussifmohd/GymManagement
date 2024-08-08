@@ -1,6 +1,6 @@
 ﻿using GymManagement.Domain.Admins.Events;
 using GymManagement.Domain.Common;
-using GymManagment.Domain.Subscription;
+using GymManagement.Domain.Subscription;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Throw;
 
-namespace GymManagment.Domain.Admins
+namespace GymManagement.Domain.Admins
 {
     public class Admin : Entity
     {

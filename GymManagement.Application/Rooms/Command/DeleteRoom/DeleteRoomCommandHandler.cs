@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 using GymManagement.Application.Rooms.Commands.DeleteRoom;
-using GymManagment.Application.Common.Interfaces;
+using GymManagement.Application.Common.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;

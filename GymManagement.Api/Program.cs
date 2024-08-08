@@ -1,6 +1,5 @@
 using GymManagement.Infrastructure;
-using GymManagment.Application;
-using GymManagment.Infrastructure;
+using GymManagement.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 

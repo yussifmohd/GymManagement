@@ -1,5 +1,5 @@
 ﻿using ErrorOr;
-using GymManagment.Application.Common.Interfaces;
+using GymManagement.Application.Common.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Application.Subscriptions.Command.DeleteSubscription
+namespace GymManagement.Application.Subscriptions.Command.DeleteSubscription
 {
     public class DeleteSubscriptionCommandHandler : IRequestHandler<DeleteSubscriptionCommand, ErrorOr<Deleted>>
     {

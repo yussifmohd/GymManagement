@@ -57,7 +57,7 @@ namespace GymManagement.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Admins",
                 columns: new[] { "Id", "SubscriptionId" },
-                values: new object[] { new Guid("2150e333-8fdc-42a3-9474-1a3956d46de8"), null });
+                values: new object[] { new Guid("90691915-8ca1-4843-aca4-072586abf309"), null });
         }
 
         /// <inheritdoc />

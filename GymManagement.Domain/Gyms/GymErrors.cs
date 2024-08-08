@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Domain.Gyms
+namespace GymManagement.Domain.Gyms
 {
     public static class GymErrors
     {

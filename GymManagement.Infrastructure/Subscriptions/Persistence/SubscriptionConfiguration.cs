@@ -1,5 +1,5 @@
 ﻿using GymManagement.Infrastructure.Common.Presistence;
-using GymManagment.Domain.Subscription;
+using GymManagement.Domain.Subscription;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GymManagment.Infrastructure.Subscriptions.Persistence
+namespace GymManagement.Infrastructure.Subscriptions.Persistence
 {
     public class SubscriptionConfiguration : IEntityTypeConfiguration<Subscription>
     {

@@ -1,5 +1,5 @@
 ﻿using ErrorOr;
-using GymManagment.Domain.Rooms;
+using GymManagement.Domain.Rooms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Throw;
 
-namespace GymManagment.Domain.Gyms
+namespace GymManagement.Domain.Gyms
 {
     public class Gym
     {
