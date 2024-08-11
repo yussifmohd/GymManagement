@@ -12,6 +12,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using GymManagement.Domain.Users;
 
 namespace GymManagement.Infrastructure.Common.Presistence
 {
@@ -24,6 +25,7 @@ namespace GymManagement.Infrastructure.Common.Presistence
         public DbSet<Subscription> Subscriptions { get; set; } = null!;
         public DbSet<Admin> Admins {  get; set; } = null!;
         public DbSet<Gym> Gyms { get; set; } = null!;
+        public DbSet<User> Users { get; set; } = null!;
 
         public async Task CommitChangesAsync()
         {

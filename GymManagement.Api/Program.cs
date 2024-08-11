@@ -1,17 +1,16 @@
 using GymManagement.Infrastructure;
 using GymManagement.Application;
+using GymManagement.Api;
 
 var builder = WebApplication.CreateBuilder(args);
-
+{
+    builder.Services
+    .AddPresentation()
+    .AddApplication()
+    .AddInfrastructure(builder.Configuration);
+}
 // Add services to the container.
 
-builder.Services.AddControllers();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddApplication();
-builder.Services.AddInfrastructure();
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
