@@ -10,15 +10,8 @@ namespace GymManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RoomsController : ApiController
+    public class RoomsController(ISender _mediator) : ApiController
     {
-        private readonly ISender _mediator;
-
-        public RoomsController(ISender mediator)
-        {
-            _mediator = mediator;
-        }
-
         [HttpPost]
         public async Task<IActionResult> CreateRoom(CreateRoomRequest request, Guid gymId)
         {

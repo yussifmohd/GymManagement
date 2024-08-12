@@ -12,16 +12,8 @@ namespace GymManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubscriptionsController : ApiController
+    public class SubscriptionsController(ISender _mediator) : ApiController
     {
-        //private readonly IMediator _mediator;
-        private readonly ISender _mediator; //We Use The Smaller Intefrace ISender Since this the one we use (Interface Segregation)
-
-        public SubscriptionsController(ISender mediator)
-        {
-            _mediator = mediator;
-        }
-
         [HttpPost]
         public async Task<IActionResult> CreateSubsription(CreateSubscriptionRequest request)
         {

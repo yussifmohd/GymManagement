@@ -18,6 +18,7 @@ namespace GymManagement.Application
                 options.RegisterServicesFromAssemblyContaining(typeof(DependencyInjection));
 
                 options.AddOpenBehavior(typeof(ValidationBehavior<,>)); //Add The Validation Behavior to the pipeline before handling the request
+                options.AddOpenBehavior(typeof(AuthorizationBehavior<,>));
             });
 
 
